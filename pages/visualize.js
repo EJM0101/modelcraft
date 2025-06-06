@@ -11,7 +11,7 @@ export default function VisualizePage() {
 
     const nodes = mcd.entities.map((ent, i) => ({
       id: ent.name,
-      position: { x: 100 + i * 200, y: 100 },
+      position: { x: 100 + i * 250, y: 100 },
       data: { label: `${ent.name}\n${ent.attributes.join("\n")}` },
       type: "default"
     }));
