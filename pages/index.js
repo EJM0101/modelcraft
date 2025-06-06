@@ -7,10 +7,17 @@ export default function Home() {
       <p className="mb-4">
         Transformez un MCD en MLD et MPD (SQL) avec visualisation interactive et explication.
       </p>
-      <div className="flex gap-4">
-        <Link href="/input" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Créer un MCD</Link>
-        <Link href="/explanation" className="bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-800">Voir Explication</Link>
-      </div>
-    </div>
+      <div className="flex gap-4 flex-wrap">
+  <Link href="/input" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+    Créer un MCD
+  </Link>
+  <Link href="/explanation" className="bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-800">
+    Voir Explication
+  </Link>
+  <Link href="/visualize" className="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">
+    Visualiser MCD
+  </Link>
+ </div>
+</div>
   );
 }
