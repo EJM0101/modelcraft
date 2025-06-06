@@ -1,0 +1,9 @@
+{
+  "entities": [
+    { "name": "Utilisateur", "attributes": ["id", "nom", "email"] },
+    { "name": "Commande", "attributes": ["id", "date", "utilisateur_id"] }
+  ],
+  "relations": [
+    { "from": "Utilisateur", "to": "Commande", "type": "1-N" }
+  ]
+}
