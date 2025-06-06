@@ -25,13 +25,16 @@ export function transformToMPD(mld) {
       if (base.toLowerCase().includes("id")) type = "INT";
       let suffix = "";
       if (attr.includes("PK")) suffix += " PRIMARY KEY";
-      if (attr.includes("FK")) suffix += ` REFERENCES ???(id)`;
+      if (attr.includes("FK")) suffix += " REFERENCES ???(id)";
       return `  ${base} ${type}${suffix}`;
     });
 
-    return `CREATE TABLE ${table.name} (
-${lines.join(",
-")}
-);`;
+    const sql = [
+      `CREATE TABLE ${table.name} (`,
+      lines.join(",\n"),
+      ");"
+    ].join("\n");
+
+    return sql;
   }).join("\n\n");
 }
