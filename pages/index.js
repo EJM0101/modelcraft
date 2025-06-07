@@ -14,9 +14,6 @@ export default function Home() {
   <Link href="/explanation" className="bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-800">
     Voir Explication
   </Link>
-  <Link href="/visualize" className="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">
-    Visualiser MCD
-  </Link>
  </div>
 </div>
   );
