@@ -38,7 +38,7 @@ export default function InputPage() {
         Format attendu :
       </p>
       <button onClick={handleLoadExample} className="mb-2 bg-green-600 text-white px-3 py-1 rounded">Charger un exemple</button>
-      <button onClick={handleVisualizeMCD} className="mb-2 bg-blue-600 text-white px-3 py-2 rounded">Visualiser MCD </button>
+      <button onClick={handleVisualizeMCD} className="mb-2 bg-blue-600 text-white px-4 py-2 rounded">Visualiser MCD </button>
 
      <textarea
         rows="12"
