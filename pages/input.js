@@ -11,6 +11,16 @@ export default function InputPage() {
     setJson(JSON.stringify(data, null, 2));
   };
 
+  const handleVisualizeMCD = async () => {
+    try {
+      const parsed = JSON.parse(json);
+      localStorage.setItem("mcd", JSON.stringify(parsed));
+      router.push("/visualize");
+    } catch (e) {
+      alert("Erreur dans le JSON");
+    }
+  };
+
   const handleSubmit = () => {
     try {
       const parsed = JSON.parse(json);
@@ -28,7 +38,9 @@ export default function InputPage() {
         Format attendu :
       </p>
       <button onClick={handleLoadExample} className="mb-2 bg-green-600 text-white px-3 py-1 rounded">Charger un exemple</button>
-      <textarea
+      <button onClick={handleVisualizeMCD} className="mb-2 bg-blue-600 text-white px-3 py-2 rounded">Visualiser MCD </button>
+
+     <textarea
         rows="12"
         value={json}
         onChange={(e) => setJson(e.target.value)}
